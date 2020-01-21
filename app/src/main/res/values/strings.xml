@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Rich Quotes</string>
+    <string name="title">Rich Quotes</string>
+    <string name="all_quotes">All Quotes</string>
+    <string name="favorite_quotes">Favourite Quotes</string>
+
+    <string-array name="quotes">
+        <item>“The trouble is, you think you have time.”</item>
+        <item>Buddha</item>
+        <item>“The goal to strive for is a poor government but rich people.”</item>
+        <item>Andrew Johnson</item>
+        <item>“Loneliness is the universal problem of rich people.”</item>
+        <item>Joan Collins</item>
+        <item>“Rich people in one country don\'t act the same as rich people in another country.”</item>
+        <item>Kenneth Langone</item>
+        <item>“A man is rich in proportion to the number of things which he can afford to let alone.”</item>
+        <item>Henry David Thoreau</item>
+        <item>“Don’t compare yourself with anyone in this world… if you do so, you are insulting yourself.”</item>
+        <item>Bill Gates</item>
+        <item>“Do your duty and a little more and the future will care for itself.”</item>
+        <item>Andrew Carnegie</item>
+        <item>“Whatever the mind can conceive and believe, it can achieve.”</item>
+        <item>Napoleon Hill</item>
+        <item>“Many of life\'s failures are people who did not realize how close they were to success when they gave up.”</item>
+        <item>Thomas A. Edison</item>
+        <item>“Do not be anxious about tomorrow, for tomorrow will be anxious for itself. Let the day\'s own trouble be sufficient for the day.”</item>
+        <item>Jesus Christ</item>
+        <item>“The very rich are not good.”</item>
+        <item>Plato</item>
+        <item>“It’s terrible to become rich and to know nothing else.”</item>
+        <item>Euripides</item>
+        <item>“He swallows riches, But will vomit them up; God will expel them from his belly.”</item>
+        <item>Old Testament</item>
+        <item>“I\'ve been rich and I\'ve been poor. It\'s better to be rich.”</item>
+        <item>Gertrude Stein</item>
+        <item>“The beauty of me is that I’m very rich.”</item>
+        <item>Donald Trump</item>
+        <item>“Being the richest man in the cemetery doesn’t matter to me. Going to bed at night saying we’ve done something wonderful...that’s what matters to me.”</item>
+        <item>Steve Jobs</item>
+        <item>“It is better to live rich than to die rich.”</item>
+        <item>Samuel Johnson</item>
+        <item>“Capital, created by the labor of the worker, crushes the worker, ruining small proprietors and creating an army of unemployed.”</item>
+        <item>Vladimir Lenin</item>
+        <item>“We are all different, but when we ask for the Lord\'s blessings, we must not forget that God created us equal.”</item>
+        <item>Vladimir Putin</item>
+        <item>“Boasting about wealth is an open invitation to others to divest you of it.”</item>
+        <item>Stewart Stafford</item>
+        <item>“There are people who have money and people who are rich.”</item>
+        <item>Coco Chanel</item>
+        <item>“If we all did the things we are really capable of doing, we would literally astound ourselves.”</item>
+        <item>Thomas A. Edison</item>
+    </string-array>
+</resources>
