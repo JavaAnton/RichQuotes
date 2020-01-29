@@ -31,6 +31,7 @@ public class AllQuotesActivity extends AppCompatActivity {
     int counter;
     SharedPreferences sharedPref;
     ArrayList<String> list = new ArrayList<>();
+    String[] quotesAndAuthors;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +43,7 @@ public class AllQuotesActivity extends AppCompatActivity {
         Context context = getApplicationContext();
         this.sharedPref = context.getSharedPreferences(
                 "MyPref", Context.MODE_PRIVATE);
-        final String[] quotesAndAuthors = res.getStringArray(R.array.quotes);
+        quotesAndAuthors = res.getStringArray(R.array.quotes);
 
         counter = 0;
         Intent intent = getIntent();
@@ -85,8 +86,15 @@ public class AllQuotesActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                list.add(quotesAndAuthors[counter]);
-                list.add(quotesAndAuthors[counter + 1]);
+             //   list.add(quotesAndAuthors[counter]);
+             //   list.add(quotesAndAuthors[counter + 1]);
+
+                sharedPref.edit().putBoolean("bool0", true).apply();
+                sharedPref.edit().remove("bool1").apply();
+                sharedPref.edit().putBoolean("bool1", true).apply();
+               // sharedPref.edit().commit();
+                Log.v("TEST" ,"" + sharedPref.getBoolean("bool1", true));
+
 
 
                 tv.setText(quotesAndAuthors[counter]);
@@ -113,13 +121,33 @@ public class AllQuotesActivity extends AppCompatActivity {
 
         editor.putInt("listSize", this.list.size());
 
-        for(int i = 0; i < list.size() ; i++)
+        for(int i = 0; i < quotesAndAuthors.length; i++)
         {
-            editor.remove("item" + i);
-            editor.putString("item" + i, list.get(i));
+         //   editor.remove("item" + i); // macht irgendwas seltsames, werte werden nicht wirklich gelöscht
+            editor.putString("item" + i, quotesAndAuthors[i]);
         }
 
-        editor.commit();
+        for(int i = 0; i < quotesAndAuthors.length; i++)
+        {
+            if (sharedPref.getBoolean("bool" + i, false) == false) {
+                Log.v("itsfalse", "Boolean " + i + "is false!");
+                editor.putBoolean("bool" + i, false).apply();
+            } else {
+                Log.v("itstrue", "Boolean " + i + "is true!");
+                editor.putBoolean("bool" + i, true).apply();
+            }
+        }
+
+        //editor.putBoolean("bool0", true);
+
+        for(int i = 0; i < quotesAndAuthors.length; i++)
+        {
+            Log.v("nibba ", "y " + sharedPref.getString("item" + i, null));
+            Log.v("boolArray index " + i, Boolean.toString(sharedPref.getBoolean("bool" + i, false)));
+        }
+
+        //editor.commit();
+       // editor.apply();
     }
 
 }
